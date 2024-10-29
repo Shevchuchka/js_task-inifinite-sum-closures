@@ -4,17 +4,17 @@
  * @return {function}
  */
 function makeInfinityAdder(currentNum) {
-  let currentNummount = currentNum || 0;
+  let amount = currentNum || 0;
 
   function sum(nextNum) {
     if (nextNum !== undefined) {
-      currentNummount += nextNum;
+      amount += nextNum;
 
       return sum;
     } else {
-      const result = currentNummount;
+      const result = amount;
 
-      currentNummount = 0;
+      amount = 0;
 
       return result;
     }
